@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Module file for page_example_module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+function register_page_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'register_page':
+      // Help text for the simple page registered for this path.
+      return t('There should be template file around here.');
+  }
+}
+
+/**
+ * @} End of "defgroup page_example".
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function register_page_theme($existing, $type, $theme, $path)
+{
+  return [
+    'register_page' => [
+      'render element' => 'custom_page',
+      'path' => $path . '/templates',
+      'template' => 'register-page',
+      'variables' => [
+        'var1' => 'default value for var1',
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,7 @@
+name: Register Page
+type: module
+description: 'Register page and adds template to it.'
+package: Learning modules
+core: 8.x
+dependencies:
+  - drupal:node

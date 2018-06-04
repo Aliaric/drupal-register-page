@@ -1,0 +1,7 @@
+register_page:
+  path: '/register-page'
+  defaults:
+    _controller: '\Drupal\register_page\Controller\RegisterPageController::template'
+    _title: 'Register page title'
+  requirements:
+    _register_page_role: 'TRUE'

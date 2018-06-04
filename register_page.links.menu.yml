@@ -1,0 +1,6 @@
+page_register.template:
+  title: Registered page with template
+  route_name: register_page
+
+# We can't define a menu link for the page_example_arguments route, because it
+# requires path arguments.
